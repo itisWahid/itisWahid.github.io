@@ -71,17 +71,19 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </a>
-                </div>
+                {project.liveUrl && (
+                  <div className="flex items-center gap-4">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      Live Demo
+                    </a>
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}
